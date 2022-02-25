@@ -1,0 +1,53 @@
+{
+    "name": "sandbox-schematics-workspace",
+    "type": [
+        "terraform_v1.0"
+    ],
+    "location": "us-south",
+    "description": "Sandbox Environment",
+    "tags": ["owner:jean"],
+    "resource_group": "sandbox-rg",
+    "template_repo": {
+        "url": "https://github.com/jeanabraham/sandbox-iac-ibmcloud/tree/main"
+    },
+    "template_data": [
+    {
+        "folder": ".",
+        "type": "terraform_v1.0",
+        "env_values":[
+        {
+          "GIT_PASSWORD":"..."
+        }
+        ],
+        "variablestore": [
+        {
+          "name": "ibmcloud_api_key",
+          "secure": true,
+          "type": "string",
+          "value": "..."
+        },  
+        {
+          "name": "region",
+          "type": "string",
+          "value": "us-south"
+        },
+        {
+          "name": "owner",
+          "type": "string",
+          "value": "jean"
+        },
+        {
+          "name": "purpose",
+          "type": "string",
+          "value": "sandbox"
+        },
+        {
+          "name": "iteration",
+          "type": "string",
+          "value": "01"
+        }
+        ]
+
+    }]
+}
+
