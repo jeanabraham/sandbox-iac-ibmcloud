@@ -10,7 +10,6 @@ resource "ibm_container_cluster" "roks_cluster" {
     default_pool_size = var.default_pool_size
         
     public_service_endpoint  = "true"
-    private_service_endpoint = "true"
 
     resource_group_id = var.resource_group
 }
