@@ -1,3 +1,8 @@
+########################################################################################
+#
+# Reference: https://cloud.ibm.com/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-tutorial-tf-clusters
+#
+########################################################################################
 
 resource "ibm_container_cluster" "roks_cluster" {
     name            = "${var.prefix}-roks"
